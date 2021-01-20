@@ -12,13 +12,13 @@ const run = async (username) => {
     return item
   })
 
-  return data.map(async row => {
+  return Promise.all(data.map(async row => {
     const response = await got(row.link)
     const html = response.body
     const doc = domino.createWindow(html).document
     const metadata = { ...getMetadata(doc, row.link), ...row }
     return metadata
-  })
+  }))
   
 }
 
