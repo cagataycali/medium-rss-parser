@@ -1,0 +1,17 @@
+{
+  "name": "medium-rss-parser",
+  "version": "1.0.0",
+  "description": "Medium RSS & metadata parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "domino": "^2.1.6",
+    "got": "^11.8.1",
+    "page-metadata-parser": "^1.1.4",
+    "rss-parser": "^3.10.0"
+  }
+}
